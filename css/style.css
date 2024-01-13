@@ -1,0 +1,343 @@
+/* Fonts  */
+
+/*font import  */
+@font-face {
+    font-family: press-start;
+    src: url("../Assets/fonts/prstartk.ttf");
+  }
+  
+  /* colors used defined as variables */
+  :root {
+    --yellow: #ffd300;
+    --darkYellow: #ffa002;
+    --lightYellow: #f9ed3f;
+    --red: #ff0401;
+    --cyan: #01f8f8;
+    --pink: #ff6080;
+  }
+  
+  /* Default *---------------- */
+  
+  html {
+    font-family: "press-start", sans-serif;
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #000000;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* change default sizes  */
+  
+  h4 {
+    font-size: 3.2vh;
+    line-height: 6vh;
+  }
+  
+  h6 {
+    font-size: 3vh;
+  }
+  
+  /*structure *------------------------------- */
+  
+  /* navigation bar  */
+  
+  /* flexbox is used here to align items  */
+  nav {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4vw;
+    color: #ffffff;
+  }
+  
+  nav ol {
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+  }
+  
+  /* inline display property is used to order nav elements  */
+  nav ol li {
+    display: inline;
+    font-size: 2.4vh;
+    text-transform: uppercase;
+  }
+  
+  nav ol li a {
+    color: #ffffff;
+    padding: 0 1.5vw;
+    transition: 0.5s;
+  }
+  
+  nav ol li a:hover {
+    color: var(--yellow);
+  }
+  
+  /*sections *--------------- */
+  
+  main {
+    padding: 20px 0 10px 0;
+  }
+  
+  section {
+    width: 100%;
+    padding: 18vh 0vw;
+    font-size: 3vh;
+    text-align: center;
+    border-bottom: 2.5px dotted var(--yellow);
+  }
+  
+  /* home section  */
+  
+  .home {
+    padding-top: 6vh;
+  }
+  /* packman logo  */
+  .home img {
+    height: 30vh;
+  }
+  
+  .ghostChaseSequence {
+    padding-top: 10vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    animation: GhostChasePackman 5s linear infinite;
+  }
+  
+  @keyframes GhostChasePackman {
+    0% {
+      right: 0%;
+    }
+  
+    100% {
+      right: 120%;
+    }
+  }
+  
+  /* icon characters image  */
+  .ghostChaseSequence img {
+    height: 6.8vh;
+    padding: 0 0.5vw;
+  }
+  
+  /* packman icon  */
+  .ghostChaseSequence img:nth-child(1) {
+    padding-left: 4vw;
+    transform: rotate(180deg);
+  }
+  
+  /* insert coin text  */
+  
+  .home h4 {
+    text-transform: uppercase;
+    padding-top: 10.5vh;
+    animation: blink 2s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  /* high scores section */
+  
+  .highScores h3 {
+    color: var(--yellow);
+    text-transform: uppercase;
+  }
+  
+  .highScores h6 {
+    text-transform: uppercase;
+  }
+  
+  /* high score list  */
+  .highScoreTable {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .highScoreRow {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 0.8vh 0;
+  }
+  
+  .highScoreRow div {
+    width: 24vw;
+  }
+  
+  .highScoreRow:nth-child(1) {
+    padding-bottom: 4vh;
+  }
+  
+  .highScoreRow:nth-child(2),
+  .highScoreRow:nth-child(6),
+  .highScoreRow:nth-child(10) {
+    color: var(--darkYellow);
+  }
+  
+  .highScoreRow:nth-child(3),
+  .highScoreRow:nth-child(7),
+  .highScoreRow:nth-child(11) {
+    color: var(--red);
+  }
+  
+  .highScoreRow:nth-child(4),
+  .highScoreRow:nth-child(8) {
+    color: var(--cyan);
+  }
+  
+  .highScoreRow:nth-child(5),
+  .highScoreRow:nth-child(9) {
+    color: var(--pink);
+  }
+  
+  /* how to play section */
+  
+  .ghostChasedSequence {
+    padding-top: 5vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    animation: GhostChasedPackman 5s linear infinite;
+  }
+  
+  @keyframes GhostChasedPackman {
+    0% {
+      left: 0%;
+    }
+  
+    100% {
+      left: 120%;
+    }
+  }
+  
+  /* icon characters image  */
+  .ghostChasedSequence img {
+    height: 6.8vh;
+    padding: 0 0.5vw;
+  }
+  
+  /* packman icon  */
+  .ghostChasedSequence img:nth-child(1) {
+    padding-right: 4vw;
+  }
+  
+  .howToPlay h6 {
+    text-transform: uppercase;
+    padding-top: 5vh;
+  }
+  
+  .howToPlay p {
+    font-size: 3.4vh;
+    width: 82%;
+    margin-left: 9%;
+    line-height: 5vh;
+    text-align: center;
+    margin-top: -1vh;
+  }
+  
+  .howToPlay p::first-line {
+    color: var(--yellow);
+    text-transform: uppercase;
+  }
+  
+  /* players section */
+  
+  .players {
+    border-bottom: 0px;
+  }
+  
+  .players h6 {
+    text-transform: uppercase;
+  }
+  
+  /* players list  */
+  .playersTable {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .playersTableRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding-bottom: 8vh;
+  }
+  
+  .playersTableRow img {
+    height: 7vh;
+  }
+  
+  .playersTableRow div {
+    width: 18vw;
+  }
+  
+  .playersTableRow:nth-of-type(1) {
+    color: var(--red);
+  }
+  
+  .playersTableRow:nth-of-type(2) {
+    color: var(--pink);
+  }
+  
+  .playersTableRow:nth-of-type(3) {
+    color: var(--cyan);
+  }
+  
+  .playersTableRow:nth-of-type(4) {
+    color: var(--yellow);
+  }
+  
+  .playerPoints {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+  }
+  
+  .playerPoints h6 {
+    padding-right: 2vw;
+  }
+  
+  .playerPoints img {
+    height: 7vh;
+    padding: 0 1vw;
+  }
+  
+  .playerPoints span {
+    height: 4vh;
+    width: 4vh;
+    margin-left: 1vw;
+    background-color: var(--lightYellow);
+  }
+  
+  .tenPoints span {
+    height: 2vh;
+    width: 2vh;
+  }
+  
+  /* Footer *------------------------ */
+  
+  footer {
+    font-size: 1.6vh;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10vh;
+  }
+  
